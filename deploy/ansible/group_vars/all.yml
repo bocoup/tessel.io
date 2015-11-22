@@ -6,6 +6,7 @@
 # enabling passwordless sudo or generating self-signed ssl certs, when testing
 # locally, in Vagrant. But not in production!
 env: production
+app_port: 8080
 
 # This var is referenced by a few other vars, eg. git_repo, hostname, site_fqdn.
 project_name: tessel-io
@@ -34,7 +35,7 @@ apt_keys:
 # Node.js 4.2.x (LTS): deb https://deb.nodesource.com/node_4.x trusty main
 # Node.js 5.x.x: deb https://deb.nodesource.com/node_5.x trusty main
 apt_ppas:
-  - "deb https://deb.nodesource.com/node_4.x trusty main"
+  - "deb https://deb.nodesource.com/node_0.12 trusty main"
   - "ppa:git-core/ppa"
 
 # Any apt packages to install. Apt package versions may be specified like

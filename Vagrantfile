@@ -6,6 +6,10 @@ VAGRANTFILE_API_VERSION = '2'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'ubuntu/trusty64'
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+    v.cpus = 2
+  end
   # Allow the project directory to be accessible inside the Vagrant box.
   # This should match the Ansible host_vars/vagrant synced_folder value.
   config.vm.synced_folder '.', '/mnt/vagrant'

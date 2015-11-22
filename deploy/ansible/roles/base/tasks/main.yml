@@ -13,6 +13,3 @@
 - name: install apt packages
   apt: name={{item}} state=latest update_cache=yes
   with_items: apt_packages
-
-- name: update npm to latest
-  npm: name=npm state=latest global=yes

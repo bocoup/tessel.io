@@ -8,5 +8,6 @@
     - {role: configure, tags: configure}
     - {role: users, tags: users}
     - {role: nginx, tags: nginx}
+    - {role: services, tags: services}
   handlers:
     - include: handlers/handlers.yml
